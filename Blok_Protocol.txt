@@ -1,0 +1,53 @@
+
+//Blok
+// Second VC
+var block:((_ value: String) -> Void )?
+
+//Action Back
+if block != nil{
+            block!(txtFieldName.text!)
+        }
+//First VC
+//Action Push
+vc.block = {(value) in
+            self.lblText.text = value
+        }
+
+
+//Protocol
+
+// Second VC
+protocol imgpass {
+    func imgfun(object: UIImage)
+}
+
+var delegate: imgpass!
+
+//Pass Data
+delegate.imgfun(object: image1.image!)
+
+
+//First VC
+//import protocol name
+impass
+
+func imgfun(object: UIImage) {
+        let getimg = object
+        //image.append(UIImage.init(named:"\(getimg)")!)
+        image.append(getimg)
+        collectionview.reloadData()
+    }
+//Action Push
+push.delegate = self
+
+
+//Shared Class
+Class A{
+
+	var arycity:[String] = []
+	Static let shared : A = A()
+}
+
+//Access Other Vc
+
+A.Shared.arycity.append(“”)
